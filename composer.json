@@ -1,0 +1,32 @@
+{
+    "name": "expnull/ocr",
+    "description": "基于百度API的图片识别.图片转文字",
+    "keywords": [
+        "百度",
+        "图片识别",
+        "图片转文字",
+        "百度API"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "expnull",
+            "email": "setorget@163.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Expnull\\Ocr\\": "src"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Expnull\\Ocr\\ServiceProvider"
+            ]
+        }
+    }
+}
