@@ -85,7 +85,7 @@ class Ocr
     public function getHttpClient(string $method = 'POST')
     {
         $client = new Client(self::$guzzleOptions);
-        return $client->request($method, self::$guzzleUrl)->getBody()->getContents();
+        return $client->request($method, self::$guzzleUrl, ['verify' => false])->getBody()->getContents();
     }
 
     /**
@@ -165,6 +165,12 @@ class Ocr
         self::$paramProbability = $probability;
     }
 
+    /**
+     * 是否检测语言，默认不检测。当前支持（中文、英语、日语、韩语）
+     *
+     * @param string $detectLanguage
+     * @author EXP_NULL mail:setorget@163.com
+     */
     public function setDetectLanguage(string $detectLanguage)
     {
         self::$paramDetectLanguage = $detectLanguage;
