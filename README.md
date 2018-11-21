@@ -66,7 +66,7 @@ array:5 [▼
     'secret' => env('OCR_API_SECRET'),
 ],
 ```
-然后在 .env 中配置 WEATHER_API_KEY ：
+然后在 .env 中配置 OCR_API_KEY 和 OCR_API_SECRET ：
 ```shell
 OCR_API_KEY=xxxxxxxxxxxxxxxxxxxxx
 OCR_API_SECRET=xxxxxxxxxxxxxxxxxxxxx
